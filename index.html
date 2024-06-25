@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Portfolio</title>
+</head>
+
+<style>
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* Navigation */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    color: var(--quaternary-color); /* White text color */
+    padding: 0;
+    display: flex;
+    margin-left: 10px;
+    position:fixed;
+}
+#nav h2 {
+    margin: 0; /* Remove default margin */
+    padding-left: 5px; /* Add space between h2 and ul */
+    font-size: 8px;
+    margin-top: 8px;
+    
+}
+nav{
+    margin-left: 0;
+    padding-left: 30px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    padding-left: 20px;
+}
+#themeIcon{
+    font-size: 10px;
+    margin-left: 0.01px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 8px;
+}
+nav ul li a:hover {
+    color: var(--primary-color); /* Change color on hover */
+    text-decoration: underline;
+}
+.image #image1{
+    height: 150px;
+    width: 100px;
+}
+
+/*home section*/
+.home{
+    display: flex;
+    flex-direction: row;
+    
+}
+.intro{
+    margin: 15px 0 0 5px;
+    padding-left: 20px;
+}
+.intro p{
+    padding-right: 30px;
+}
+.image{
+    padding-right: 5px;
+}
+.home .intro h2,h1{
+    font-size: 16px;
+}
+.home .intro p{
+    font-size: 11px;
+}
+.btn-instagram,
+    .btn-facebook,
+    .btn-linked-in,
+    .btn-hire {
+        border: none;
+        width: 60px;
+        height: 25px;
+        display: inline;
+    }
+    .link{
+        font-size: 8px;
+        padding: 0 1px 17px 0px;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        justify-content: space-between;
+    }
+    h4{
+        font-size: 11px;
+    }
+    #image2{
+        height: 130px;
+        width: 80px;
+    }
+    .about-me {
+    display: block;
+    flex-direction: row;
+    justify-content: none;
+    }
+    .details{
+        margin-right: 15px;
+    }
+    .pr-skills{
+        display: block;
+    }
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligning items vertically in the skills section */
+    margin-left: 10%; /* Adding margin for separation from details section */
+}
+    h3{
+        font-size: 12px;
+    }
+    .title-s{
+        font-size: 18px;
+    }
+    .skill-mf .progress{
+        height: .3rem;
+        width: 13rem;
+    }
+    .progress-bar1, .progress-bar2,
+    .progress-bar3, .progress-bar4,
+    .progress-bar5{
+        height: .3rem;
+    }
+    .r{
+        font-size: 25px;
+    }
+    .rp{
+        font-size: 15px;
+    }
+    .rh{
+        font-size: 20px;
+    }
+    .qualification-container{
+        justify-content: space-between;
+    }
+    .qualification-container .qualification{
+        height: 180px;
+        width: 160px;
+    }
+    .cv{
+        margin-left: 34%;
+    }
+    .ha1{
+        font-size: 20px;
+    }
+    .ha2{
+        font-size: 12px;
+    }
+    .icons{
+        margin: 0;
+        justify-content: center;
+    }
+    .iconic{
+        background-color: transparent;
+        height: 80px;
+        width: 80px;
+    }
+    #ii{
+        font-size: 1.2rem;
+
+    }
+    .icon1{
+        font-size: 10px;
+        padding-left: 18px;
+    }
+    .b5{
+        margin-left: 37%;
+    }
+    .h5{
+        font-size: 20px;
+    }
+    .p5{
+        font-size: 15px;
+    }
+    .h10{
+        font-size: 15px;
+    }
+    #i1{
+        font-size: 1.5rem;
+        padding-left: 5px;
+    }
+    .p11{
+        font-size: 10px;
+        margin-left: 25%;
+    }
+    .small-icon{
+        margin-left: 20%;
+    }
+
+}
+
+</style>
+
+
+<body id="background">
+    <section id="home-page">
+    <div id="nav">
+        <h2 class="logo">Nischal Koirala</h2>
+        <nav>
+            <ul>
+                <li><a href="#home-page">Home</a></li>
+                <li><a href="#about-page">About me</a></li>
+                <li><a href="#resume-page">Resume</a></li>
+                <li><a href="#contact-page">Contact</a></li>
+                <i class="fa-solid fa-sun" id="themeIcon" onclick="toggleTheme()"></i>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="home">
+        <div class="intro">
+            <h2>Hey!</h2>
+            <h1>I am <span>Nischal Koirala</span></h1>
+            <h1><span>Frontend Engineer</span></h1>
+            <p>I am a web developer with a passion for designing and developing websites.
+            I have a Bachelor's Degree in Bachelor of Science in Information Technology
+            from the University of London Metropolitan.</p>
+            <button class="btn-instagram"><a class="link" href="https://www.instagram.com/nischal_koirala17/">Instagram</a></button>
+            <button class="btn-facebook"> <a class="link" href="https://www.facebook.com/koiralanischal.koirala">Facebook</a></button>
+            <button class="btn-linked-in"><a class="link" href="https://www.linkedin.com/in/the-solti-codes-995477274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linked-In</a></button>
+            <button class="btn-hire" onclick="hire()"><a class="link" href="#">Hire</a></button>
+        </div>
+        <div class="image">
+            <img src="aboutme.jpg" alt="Profile Picture" id="image1">
+        </div>
+    </div>
+    <div class="line-break"></div>
+    <br />
+</section>
+
+<section id="about-page">
+    <div class="about-me">
+        <div class="container">
+            <div>
+                <img src="aboutme.jpg" alt="Profile Picture" id="image2">
+            </div>
+            <div>
+                <h4>Name: Nischal Koirala</h4>
+                <h4>Job-Role: Frontend Engineer</h4>
+                <h4>Education: +2 in Computer Science</h4>
+                <h4>Experience: 1 year</h4>
+                <h4>Address: Inaruwa, Sunsari</h4>
+            </div>
+        </div>
+
+        <div class="details">
+            <h1 class="a">About Me</h1>
+            <h3 class="b">With just 1 years of comprehensive experience
+                in the field of Web Development, accompanied by a bachelor's degree in Information Technology. 
+                Proficient in Java, java Swing, python, javaScript, CSS, SQL. Demonstrated success in leading
+                impactful projects and providing effective mentorship.</h3>
+        </div>
+    </div>
+
+
+    <div class="pr-skills">
+    <div class="skill-mf">
+        <p class="title-s">Skills</p>
+        <strong>SQL: Experienced</strong>
+        <div class="progress">
+            <div class="progress-bar1" role="progressbar" aria-valuenow="76" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        
+        <strong>PYTHON: Beginner</strong>
+        <div class="progress">
+            <div class="progress-bar2" role="progressbar" aria-valuenow="46" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        
+        <strong>Java: Skillful</strong>
+        <div class="progress">
+            <div class="progress-bar3" role="progressbar" aria-valuenow="69" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        
+        <strong>Java Swing: Skillful</strong>
+        <div class="progress">
+            <div class="progress-bar4" role="progressbar" aria-valuenow="71" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        
+        <strong>JavaScript: Beginner</strong>
+        <div class="progress">
+            <div class="progress-bar5" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="profile-container">
+    <h4>Profile:<span class="s">  Frontend Engineer</span></h4>
+    <h4>Degree: <span class="s">  Studying Bsc.IT(Not graduated yet)</span></h4>
+    <h4>Language: <span class="s">  English, Nepali </span></h4>
+    <h4>Other Skills: <span class="s">  Ms. Word, Ms. Excel, Communication, Leadership, etc.</span></h4>
+    <h4>Interest: <span class="s">  Coding, Music, Guitar, Reading, Gym, etc.</span></h4>
+    </div>
+</div>
+</section>
+    <br />
+
+<section id="resume-page">
+    <div>
+        <h1 class="r">Resume</h1>
+        <p class="rp">I may not have any experience of working in real life projects 
+        but i have build many webpages while working in coursework given 
+        by our colleges and i also have build many webpages on my own.</p>
+    </div>
+    <h1 class="rh">Education</h1>
+    <div class="underline"></div>
+
+    <div class="qualification-container">
+        <div class="qualification">
+            <h1 class="hd">2078-2080</h1>
+            <h1 class="hh">Faculty: Computer Science</h1>
+            <h3 class="hh">Merryland College</h3>
+            <h4 class="hh">GPA: 3.32</h4>
+        </div>
+        <div class="qualification">
+            <h1 class="hd">2065-2078</h1>
+            <h1 class="hh">Higher Secondary School</h1>
+            <h3 class="hh">Inaruwa English Boarding School</h3>
+            <h4 class="hh">GPA: 3.55</h4>
+        </div>
+    </div>
+    <button class="cv"><a href="https://drive.google.com/file/d/14y-avxUUPx8a0gdE0tsVuEbsKIJznFhX/view?usp=drive_link" style="color: black;">Download CV</a></button>
+<br />
+</section>
+
+
+<section id="contact-page">
+
+    <h1 class="ha1">Contact me</h1>
+    <p class="ha2">Below are the links to reach out to me</p>
+
+    <div class="icons">
+        <span class="iconic"><i id="ii" class="fa-solid fa-location-dot"></i></span>
+        <span class="iconic"><i id="ii" class="fa-solid fa-address-book"></i></span>
+        <span class="iconic"><i id="ii"  class="fa-solid fa-envelope"></i></span>
+        <span class="iconic"><i id="ii"  class="fa-solid fa-file"></i></span>
+    </div>
+    <div class="icons">
+        <h3 class="icon">Address</h3>
+        <h3 class="icon">Contact Number</h3>
+        <h3 class="icon">Email Address</h3>
+        <h3 class="icon">Resume</h3>
+    </div>
+    <div class="icons">
+        <a href="" class="icon1">Inaruwa-4, Sunsari</a>
+        <a href="" class="icon1">9829346882</a>
+        <a href="" class="icon1">koiralanischal01@gmail.com</a>
+        <a href="#resume-page" class="icon1">Resume Link</a>
+    </div>
+    <h1 class="h5">"Have a Question?</h1>
+    <p class="p5">Feel free to reach out to me</p>
+    <button class="b5"><a href="https://forms.gle/WxD5orXMPRm3gf7u8" style="color: black;">Click me!</a></button>
+
+    <div class="small-icon">
+        <h4 class="h10">Find me on</h4>
+        <a href="https://www.facebook.com/koiralanischal.koirala"><i id="i1" class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/nischal_koirala17/"> <i id="i1" class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/the-solti-codes-995477274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i id="i1" class="fa-brands fa-linkedin"></i></a>
+        <a href="HTTPS://wa.me/9829346882"><i id="i1" class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://t.me/nischal457"><i id="i1" class="fa-brands fa-telegram"></i></a>
+    </div>
+</section>
+
+<p class="p11">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
